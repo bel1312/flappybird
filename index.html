@@ -1,100 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flappy Bird</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #87CEEB, #98FB98);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: 'Arial', sans-serif;
-            overflow: hidden;
-        }
-        .game-container {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-        canvas {
-            border: 3px solid #fff;
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.3);
-            cursor: pointer;
-        }
-        .ui {
-            color: white;
-            font-size: 24px;
-            text-align: center;
-            min-width: 200px;
-        }
-        .ui h1 {
-            font-size: 36px;
-            margin: 0 0 20px 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        .stat {
-            margin: 15px 0;
-            padding: 12px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-        }
-        .controls {
-            font-size: 16px;
-            margin-top: 30px;
-            line-height: 1.6;
-        }
-        .game-over {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0,0,0,0.8);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            display: none;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #87ceeb, #98fb98);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "Arial", sans-serif;
+        overflow: hidden;
+      }
+      .game-container {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+      }
+      canvas {
+        border: 3px solid #fff;
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+      .ui {
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        min-width: 200px;
+      }
+      .ui h1 {
+        font-size: 36px;
+        margin: 0 0 20px 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .stat {
+        margin: 15px 0;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+      }
+      .controls {
+        font-size: 16px;
+        margin-top: 30px;
+        line-height: 1.6;
+      }
+      .game-over {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        display: none;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="game-container">
-        <canvas id="gameCanvas" width="600" height="800"></canvas>
-        <div class="ui">
-            <h1>FLAPPY<br>BIRD</h1>
-            <div class="stat">
-                <div>Score</div>
-                <div id="score">0</div>
-            </div>
-            <div class="stat">
-                <div>Best</div>
-                <div id="best">0</div>
-            </div>
-            <div class="controls">
-                <strong>Controls:</strong><br>
-                Click or Space to Flap<br><br>
-                <strong>Tips:</strong><br>
-                • Time your flaps carefully<br>
-                • Stay in the middle<br>
-                • Don't panic!<br>
-                • Practice makes perfect
-            </div>
+      <canvas id="gameCanvas" width="600" height="800"></canvas>
+      <div class="ui">
+        <h1>FLAPPY<br />BIRD</h1>
+        <div class="stat">
+          <div>Score</div>
+          <div id="score">0</div>
         </div>
+        <div class="stat">
+          <div>Best</div>
+          <div id="best">0</div>
+        </div>
+        <div class="controls">
+          <strong>Controls:</strong><br />
+          Space to Flap<br /><br />
+          <strong>Tips:</strong><br />
+          • Time your flaps carefully<br />
+          • Stay in the middle<br />
+          • Don't panic!<br />
+          • Practice makes perfect
+        </div>
+      </div>
     </div>
-    
+
     <div class="game-over" id="gameOver">
-        <h2>Game Over!</h2>
-        <p>Score: <span id="finalScore">0</span></p>
-        <p>Click to restart</p>
+      <h2>Game Over!</h2>
+      <p>Score: <span id="finalScore">0</span></p>
+      <p>Click to restart</p>
     </div>
-    
+
     <script src="game.js"></script>
-</body>
+  </body>
 </html>
